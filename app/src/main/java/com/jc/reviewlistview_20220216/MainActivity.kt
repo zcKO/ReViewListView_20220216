@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
             val clickedItem = fruitList[position]
 
-            Toast.makeText(this, "${clickedItem.name} 의 가격은 ${clickedItem.price} 입니다.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "${clickedItem.name} 의 가격은 ${clickedItem.price}원 입니다.", Toast.LENGTH_SHORT).show()
             
         }
 
@@ -47,7 +47,8 @@ class MainActivity : AppCompatActivity() {
                     fruitList.remove(longClickedItem)
                     fruitAdapter.notifyDataSetChanged()
                 })
-                .setNeutralButton("취소", null)
+                .setNegativeButton("취소", null)
+                .setNeutralButton("중립", null)
 
             alert.show()
 
